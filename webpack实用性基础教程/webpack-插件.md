@@ -35,9 +35,9 @@
 
       // 输出地方
       output: {
-          path: path.resolve(__dirname, 'dist'),
-          filename: 'main.js'
+          ...
       },
+      
       plugins : [ //这里存放插件
           new HtmlWebpackPlugin({ //new 一个HtmlWebpackPlugin实例子
             filename : 'main.html', // 创建文件名称
