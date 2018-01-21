@@ -1,4 +1,4 @@
-# webpack实用性基础教程/webpack-插件
+# webpack实用性基础教程 -- webpack-插件
 以 html-webpack-plugin 插件为例，讲述插件安装
 
 #### 安装 html-webpack-plugin 插件

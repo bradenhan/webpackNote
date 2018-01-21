@@ -10,6 +10,7 @@ webpack是一个模块打包器。
 
  1. [webpack的基本语法和工作流程](webpack的基本语法和工作流程.md)
  2. [webpack-插件](webpack-插件.md)
+ 3. [webpack-loader](webpack-loader.md)
 
 
 
