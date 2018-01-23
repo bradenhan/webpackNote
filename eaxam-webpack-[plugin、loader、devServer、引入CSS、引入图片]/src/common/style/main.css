@@ -1,5 +1,14 @@
 body{
   /*background: url(../img/dogs.jpg) no-repeat 50% 50%;*/
   background: #bbb;
-  color: #fff;
+  color: #fff; 
 }
+/* @font-face {
+	font-family: 'f';
+	src: url('//at.alicdn.com/t/font_211024_wmhqoulr2gmsra4i.eot');
+	  src: url('//at.alicdn.com/t/font_211024_wmhqoulr2gmsra4i.eot?#iefix') format('embedded-opentype'),
+	  url('//at.alicdn.com/t/font_211024_wmhqoulr2gmsra4i.woff') format('woff'),
+	  url('//at.alicdn.com/t/font_211024_wmhqoulr2gmsra4i.ttf') format('truetype'),
+	  url('//at.alicdn.com/t/font_211024_wmhqoulr2gmsra4i.svg#iconfont') format('svg');
+} */
+ 

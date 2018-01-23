@@ -47,7 +47,14 @@ module.exports = { // nodeJS 模块化语法
                 limit: 8192 //以b为单位 1kb = 1000b,大于此体积的会图片打包，否则图片会转换成base64
               }
             }]
-        }]
+        },
+        {
+          test: /\.(eot|woff|ttf|svg|woff2)$/,
+          use: [
+            'file-loader' // 1. 图片移动到打包目录 2. 图片转换成需要的路径，并且重命名
+          ]
+        },
+        ]
       },
       devServer: {
         open: true, // 自动打开

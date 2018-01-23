@@ -13,6 +13,8 @@ webpack是一个模块打包器。
  3. [webpack-loader](webpack-loader.md)
  4. [webpack-devServer](webpack-devServer.md)
  5. [webpack-引入CSS](引入CSS.md)
+ 5. [webpack-引入图片](引入图片.md)]
+ 6. [webpack-引入字体.md](引入字体.md)
 
 
 
