@@ -2,7 +2,7 @@
 
 css-loader
 
-#### 安装 webpack-dev-server 插件
+#### 安装 css-loader 插件
 > npm i -D css-loader
 
 #### `package.json` 插件位置
