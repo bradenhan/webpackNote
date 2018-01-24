@@ -30,7 +30,26 @@ module.exports = { // nodeJS 模块化语法
           test: /\.css$/,
           use: [
             'style-loader', // 第二布 -- 插入样式到<style></style>结构并插入到body中
-            'css-loader' // 第一步 -- 解析样式
+            //'css-loader' // 第一步 -- 解析样式
+            {
+              loader : 'css-loader',
+              options : {
+                   modules: true, //开启模块化
+                   localIdentName : '[path][name]__[local]--[hash:base64:5]'
+              }
+            }
+          ],
+          exclude : [//排除某些文件夹（不模块化）
+            path.resolve(__dirname,'node_modules'),
+            path.resolve(__dirname,'src/common')
+          ]
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader','css-loader'],
+          include : [ // 包含（直解析这里面的文件，其余的CSS模块化处理
+            path.resolve(__dirname,'node_modules'),
+            path.resolve(__dirname,'src/common')
           ]
         },
         // {
