@@ -1,12 +1,12 @@
 # 使用babel
 
-babel
+[babel](https://babeljs.io)
 
 
-## 1. 使用 file-loader 引入字体
+## 1. 使用 babel-preset-env 配置babel
 
-#### 安装 file-loader 插件
-> npm i -D file-loader
+#### 安装 babel-preset-env 插件
+> npm i -D babel-preset-env
 
 
 #### 修改`webpack.config.dev.js` 文件
@@ -24,12 +24,17 @@ babel
       ],
       module: { // 这里存放loader
           ...
-          ,{ // 这里配置file-loader
-            test: /\.(eot|woff|ttf|svg|woff2)$/,
-            use: [
-              'file-loader' // 1. 字体文件移动到打包目录 2. 字体转换成需要的路径，并且重命名
+          ,
+          {
+            test: /\.js$/,
+            use: [{
+              loader: "babel-loader",
+            }],
+            exclude : [//排除某些文件夹
+              path.resolve(__dirname,'node_modules') // 这里很重要
             ]
-          }
+          },
+          ...
 
       },
       devServer: { // 这里配置webpack-devServer
@@ -37,20 +42,11 @@ babel
       }
     };
 
-#### 修改`app.js`文件
-
-    import React from 'react';
-    import ReactDOM from 'react-dom';  
-
-    import './common/style/main.css'; // CSS中引用
-
-    ReactDOM.render(
-        <div>
-        React ussssssd <br />
-          <i className="fa fa-rocket"></i>
-        </div>,
-        document.getElementById('root')
-    );
+#### 新建`.babelrc`文件
+    {
+      "presets": ["react","env"],
+      "plugins": ["transform-object-rest-spread"]
+    }
 
 #### 执行打包命令
 > npm run start

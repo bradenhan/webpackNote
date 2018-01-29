@@ -22,7 +22,7 @@ module.exports = { // nodeJS 模块化语法
           use: [{
             loader: "babel-loader",
           }],
-          exclude : [//排除某些文件夹（不模块化）
+          exclude : [//排除某些文件夹 
             path.resolve(__dirname,'node_modules')
           ]
         },
