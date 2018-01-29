@@ -22,7 +22,7 @@ module.exports = { // nodeJS 模块化语法
           use: [{
             loader: "babel-loader",
             options: {
-              presets: ['react']
+              presets: ['react','env']
             }
           }]
         },
@@ -52,12 +52,60 @@ module.exports = { // nodeJS 模块化语法
             path.resolve(__dirname,'src/common')
           ]
         },
-        // {
-        //   test: /\.(png|jpg|gif)$/,
-        //   use: [
-        //     'file-loader' // 1. 图片移动到打包目录 2. 图片转换成需要的路径，并且重命名
-        //   ]
-        // },
+        {
+          test: /\.scss$/,
+          use: [
+            'style-loader', // 第二布 -- 插入样式到<style></style>结构并插入到body中
+            //'css-loader' // 第一步 -- 解析样式
+            {
+              loader : 'css-loader',
+              options : {
+                   modules: true, //开启模块化
+                   localIdentName : '[path][name]__[local]--[hash:base64:5]'
+              }
+            },
+            'sass-loader'
+          ],
+          exclude : [//排除某些文件夹（不模块化）
+            path.resolve(__dirname,'node_modules'),
+            path.resolve(__dirname,'src/common')
+          ]
+        },
+        {
+          test: /\.scss$/,
+          use: ['style-loader','css-loader','sass-loader'],
+          include : [ // 包含（直解析这里面的文件，其余的CSS模块化处理
+            path.resolve(__dirname,'node_modules'),
+            path.resolve(__dirname,'src/common')
+          ]
+        },
+        {
+          test: /\.less$/,
+          use: [
+            'style-loader', // 第二布 -- 插入样式到<style></style>结构并插入到body中
+            //'css-loader' // 第一步 -- 解析样式
+            {
+              loader : 'css-loader',
+              options : {
+                   modules: true, //开启模块化
+                   localIdentName : '[path][name]__[local]--[hash:base64:5]'
+              }
+            },
+            'less-loader'
+          ],
+          exclude : [//排除某些文件夹（不模块化）
+            path.resolve(__dirname,'node_modules'),
+            path.resolve(__dirname,'src/common')
+          ]
+        },
+        {
+          test: /\.less$/,
+          use: ['style-loader','css-loader','less-loader'],
+          include : [ // 包含（直解析这里面的文件，其余的CSS模块化处理
+            path.resolve(__dirname,'node_modules'),
+            path.resolve(__dirname,'src/common')
+          ]
+        },
         {
           test: /\.(png|jpg|gif)$/,
           use: [{

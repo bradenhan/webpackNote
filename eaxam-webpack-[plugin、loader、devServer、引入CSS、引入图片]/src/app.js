@@ -8,11 +8,13 @@ import ReactDOM from 'react-dom';
 import 'font-awesome/css/font-awesome.css'
 
 import style from './main.css'
+import './common/style/main.less'
+import  main from './common/style/main.scss';
 
 ReactDOM.render(
     <div>
     React ussssssde <br />
-    <span className="ot">收拾收拾
+    <span className="a bt">收拾收拾
     </span>< br/>
     <em className={style.ox}>sss</em> < br/>
     <span className="fa fa-rocket">sss</span>
