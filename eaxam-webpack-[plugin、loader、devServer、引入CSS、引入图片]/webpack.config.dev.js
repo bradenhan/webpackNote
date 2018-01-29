@@ -21,10 +21,10 @@ module.exports = { // nodeJS 模块化语法
           test: /\.js$/,
           use: [{
             loader: "babel-loader",
-            options: {
-              presets: ['react','env']
-            }
-          }]
+          }],
+          exclude : [//排除某些文件夹（不模块化）
+            path.resolve(__dirname,'node_modules')
+          ]
         },
         {
           test: /\.css$/,
