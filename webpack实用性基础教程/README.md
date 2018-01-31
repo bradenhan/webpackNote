@@ -13,12 +13,12 @@ webpack是一个模块打包器。
  3. [webpack-loader](webpack-loader.md)
  4. [webpack-devServer](webpack-devServer.md)
  5. [webpack-引入CSS](引入CSS.md)
- 5. [webpack-引入图片](引用图片.md)]
+ 5. [webpack-引入图片](引用图片.md)
  6. [webpack-引入字体](引入字体.md)
  7. [webpack-CSS模块化](CSS模块化.md)
- 8. [使用less和scss](使用less和scss.md)
- 9. [使用babel](使用babel.md)
- 10. [webpack-publicPath](webpack-publicPath.md)
+ 8. [webpack-使用less和scss](使用less和scss.md)
+ 9. [webpack-使用babel](使用babel.md)
+ 10. [webpack-publicPath配置](webpack-publicPath.md)
 
 
 
