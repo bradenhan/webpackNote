@@ -3,18 +3,7 @@
 css-loader
 
 #### 安装 css-loader 插件
-> npm i -D css-loader
-
-#### `package.json` 插件位置
-
-    {
-        ...
-      "scripts": {
-        ...
-        "start": "webpack-dev-server --config webpack.config.dev.js" // 添加 webpack-dev-server 配置文件
-      },
-      ...
-    }
+> npm i -D css-loader 
 
 #### 修改`webpack.config.dev.js` 文件
 
