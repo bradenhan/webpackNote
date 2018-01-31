@@ -18,6 +18,7 @@ ReactDOM.render(
     </span>< br/>
     <em className={style.ox}>sss</em> < br/>
     <span className="fa fa-rocket">sss</span>
+    <img src={require ('./common/img/dogs.jpg')} />
     </div>,
     document.getElementById('root')
 );

@@ -18,6 +18,7 @@ webpack是一个模块打包器。
  7. [webpack-CSS模块化](CSS模块化.md)
  8. [使用less和scss](使用less和scss.md)
  9. [使用babel](使用babel.md)
+ 10. [webpack-publicPath](webpack-publicPath.md)
 
 
 
