@@ -98,5 +98,5 @@ less 和 sass 使用十分类似
 
 less-loader less
 
-#### 安装 less-loader 插件
+#### 安装 less-loader less 插件
 > npm i -D less-loader less
