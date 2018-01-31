@@ -4,7 +4,7 @@ CSS模块化 -- 把类名转换成另一种代码
 
 > **loader 处理顺序-- 从右往左优先级，从后往前执行顺序**
 
-## 1. 使用 css-loader 引用图片
+## 1. 使用 css-loader 引用CSS
 
 #### 安装 css-loader 插件
 > npm i -D css-loader
