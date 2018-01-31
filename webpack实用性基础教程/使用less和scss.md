@@ -2,7 +2,7 @@
 
 sass-loader node-sass
 
-#### 安装 css-loader 插件
+#### 安装 sass-loader node-sass 插件
 > npm i -D sass-loader node-sass
 
 #### `package.json` 插件位置
